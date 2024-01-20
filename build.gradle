@@ -1,0 +1,95 @@
+plugins {
+	id 'maven-publish'
+	alias libs.plugins.quilt.loom
+}
+
+archivesBaseName = project.archives_base_name
+version = "${project.version}+${libs.versions.minecraft.get()}"
+group = project.maven_group
+
+repositories {
+	// publishing
+	maven {
+		name = "CurseForge"
+		url = "https://minecraft.curseforge.com/api/maven"
+	}
+
+	// CCA
+	maven {
+		name = 'Ladysnake Mods'
+		url = 'https://maven.ladysnake.org/releases'
+	}
+
+	// mod menu
+	maven {
+		name = 'TerraformersMC'
+		url = 'https://maven.terraformersmc.com/'
+	}
+
+	maven { url 'https://jitpack.io' }
+
+	maven {
+		name "modrinth"
+		url "https://api.modrinth.com/maven"
+	}
+
+	// mialee misc
+	maven { url "https://maven.willbl.dev/releases" }
+
+	maven { url 'https://masa.dy.fi/maven' }
+
+	mavenCentral()
+}
+
+
+dependencies {
+	minecraft libs.minecraft
+	mappings variantOf(libs.quilt.mappings) { classifier 'intermediary-v2' }
+	modImplementation libs.quilt.loader
+
+	modImplementation libs.quilted.fabric.api
+
+	modImplementation include ("com.github.Arathain:LodestoneLib-Quilt:${project.lodestone_version}"){ transitive = false }
+	modImplementation include("io.github.ladysnake:satin:${project.satin_version}")
+	modImplementation include("maven.modrinth:midnightlib:$project.midnightlib_version")
+
+	modImplementation include("maven.modrinth:midnightlib:${midnightlib_version}")
+}
+
+processResources {
+	inputs.property 'version', version
+
+	filesMatching('quilt.mod.json') {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = 'UTF-8'
+	it.options.release = 17
+}
+
+java {
+	// Still required by IDEs such as Eclipse and Visual Studio Code
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+	withSourcesJar()
+}
+
+jar {
+	from('LICENSE') {
+		rename { "${it}_${archivesBaseName}" }
+	}
+}
+
+// Configure the maven publication
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+		}
+	}
+
+	repositories {
+	}
+}
