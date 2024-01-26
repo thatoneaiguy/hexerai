@@ -2,7 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"4": "hexerei:block/pedestal"
+		"4": "hexerei:block/pedestal",
+    "particle": "minecraft:block/deepslate_bricks"
 	},
 	"elements": [
 		{

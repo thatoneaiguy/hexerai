@@ -1,0 +1,14 @@
+{
+  "boom": {
+    "sounds": [
+      "hexerei:boom"
+    ],
+    "subtitle": "hexerei.subtitles.boom"
+  },
+  "ringing": {
+    "sounds": [
+      "hexerei:ringing"
+    ],
+    "subtitle": "hexerei.subtitles.ringing"
+  }
+}

@@ -6,8 +6,10 @@ import org.quiltmc.qsl.base.api.entrypoint.client.ClientModInitializer;
 
 public class HexereiClient implements ClientModInitializer {
 
+
 	@Override
 	public void onInitializeClient(ModContainer mod) {
+
 		HexereiParticles.registerFactories();
 	}
 }

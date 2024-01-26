@@ -8,9 +8,9 @@
 			"name": "Hexerei",
 			"description": "Simple space magic mod for simple people",
 			"contributors": {
-				"thatoneaiguy": "Programmer",
+				"LivingLemming": "Bitch",
 				"ideologi": "Artist",
-				"LivingLemming": "Bitch"
+				"thatoneaiguy": "Author"
 			},
 			"contact": {
 			},
@@ -18,7 +18,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.thatoneaiguy.hexerei.Hexerei"
+			"init": "com.thatoneaiguy.hexerei.Hexerei",
+			"client_init": "com.thatoneaiguy.hexerei.HexereiClient"
 		},
 		"depends": [
 			{
