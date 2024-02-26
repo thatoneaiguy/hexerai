@@ -1,12 +1,7 @@
 package com.thatoneaiguy.hexerei;
 
-import com.thatoneaiguy.hexerei.init.HexereiItems;
-import com.thatoneaiguy.hexerei.init.HexereiBlocks;
-import com.thatoneaiguy.hexerei.init.HexereiParticles;
-import com.thatoneaiguy.hexerei.init.HexereiSoundEvents;
-import net.minecraft.sound.SoundEvent;
+import com.thatoneaiguy.hexerei.init.*;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import org.jetbrains.annotations.NotNull;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
@@ -21,7 +16,7 @@ public class Hexerei implements ModInitializer {
 
 	public static final Logger LOGGER = LoggerFactory.getLogger("hexerei");
 
-	public static final Color MAGIC_BLUE = new Color(0x7B9DCA);
+	public static final Color MAGIC = new Color(0x5C0000);
 
 	public static @NotNull Identifier id(String path) {
 		return new Identifier(MOD_ID, path);
@@ -37,6 +32,8 @@ public class Hexerei implements ModInitializer {
 		HexereiParticles.register();
 
 		HexereiSoundEvents.register();
+
+		HexereiEntities.register();
 
 	}
 }

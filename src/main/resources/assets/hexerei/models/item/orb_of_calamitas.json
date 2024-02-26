@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "hexerei:item/kugel_scroll"
+    "layer0": "hexerei:item/orb_of_calamitas"
   }
 }

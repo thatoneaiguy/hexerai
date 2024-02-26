@@ -10,5 +10,10 @@
       "hexerei:ringing"
     ],
     "subtitle": "hexerei.subtitles.ringing"
+  },  "spellcast": {
+    "sounds": [
+      "hexerei:spellcast"
+    ],
+    "subtitle": "hexerei.subtitles.spellcast"
   }
 }

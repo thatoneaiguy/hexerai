@@ -1,10 +1,11 @@
 {
   "itemGroup.hexerei.hexerei": "Hexerei",
 
-  "item.hexerei.kugel_scroll": "Kugel Scroll",
+  "item.hexerei.orb_of_calamitas": "§4Orb Of Calamitas",
 
   "block.hexerei.pedestal": "Pedestal",
 
   "hexerei.subtitles.block.ritual.boom": "Ritual Starts",
-  "hexerei.subtitles.block.ringing": "Ears Ringing"
+  "hexerei.subtitles.block.ringing": "Ears Ringing",
+  "hexerei.subtitles.block.spellcast": "Cast Spell"
 }

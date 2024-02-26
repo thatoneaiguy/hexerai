@@ -15,11 +15,18 @@ public class HexereiSoundEvents {
 
 	public static SoundEvent RINGING_SOUND_EVENT = new SoundEvent(RINGING);
 
+
+	public static final Identifier SPELLCAST = new Identifier("hexerei:spellcast");
+
+	public static SoundEvent SPELLCAST_SOUND_EVENT = new SoundEvent(SPELLCAST);
+
 	public static void register() {
 
 		Registry.register(Registry.SOUND_EVENT, HexereiSoundEvents.BOOM, BOOM_SOUND_EVENT);
 
 		Registry.register(Registry.SOUND_EVENT, HexereiSoundEvents.RINGING, RINGING_SOUND_EVENT);
+
+		Registry.register(Registry.SOUND_EVENT, HexereiSoundEvents.SPELLCAST, SPELLCAST_SOUND_EVENT);
 
 	}
 }

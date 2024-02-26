@@ -19,6 +19,8 @@ public class ExplosionParticleType extends ParticleType<WorldParticleEffect> {
 		return true;
 	}
 
+	
+
 	@Override
 	public Codec<WorldParticleEffect> getCodec() {
 		return WorldParticleEffect.codecFor(this);
